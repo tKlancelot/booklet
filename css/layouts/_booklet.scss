@@ -1,0 +1,23 @@
+.heading{
+    border:2px solid red;
+    margin: auto auto 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.booklet{
+    display: flex;
+    width: 100%;
+    border:2px solid blue;
+    margin:0 auto auto;
+    justify-content: center;
+    min-height: 48vh;
+    &__body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

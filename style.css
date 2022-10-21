@@ -1,5 +1,49 @@
-html,body,*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+html, body, * {
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 0;
+  margin: 0;
 }
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.page {
+  width: 24vw;
+  height: 32vw;
+  border: 4px solid orange;
+  background-color: #fff;
+  position: absolute;
+}
+
+.heading {
+  border: 2px solid red;
+  margin: auto auto 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booklet {
+  display: flex;
+  width: 100%;
+  border: 2px solid blue;
+  margin: 0 auto auto;
+  justify-content: center;
+  min-height: 48vh;
+}
+.booklet__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
