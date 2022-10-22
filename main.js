@@ -44,15 +44,21 @@ btn.addEventListener('click',function(){
         switch(true){
             case (index == allPages.length - 1):
                 allPages[index].classList.add('flipped');
+                this.style.pointerEvents = "none";
                 setTimeout(function(){
                     allPages.forEach(element => {
                         element.classList.remove('flipped');
                     });
                     index = 0;
+                    btn.style.pointerEvents = "auto";
                 },1000)
                 break;
             default:
                 allPages[index].classList.add('flipped');
+                this.style.pointerEvents = "none";
+                setTimeout(function(){
+                    btn.style.pointerEvents = "auto";
+                },1000)
                 index++;
                 break;
         }
