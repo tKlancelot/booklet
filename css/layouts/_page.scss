@@ -1,7 +1,42 @@
 .page{
-    width: 24vw;
-    height: 32vw;
-    border:4px solid orange;
-    background-color: #fff;
     position: absolute;
+    perspective: 1000px;
+    &__body{
+        transition: 0.16s linear;
+        background-color: #fff;
+        transform-origin: center;
+        width: 22vw;
+        height: 28vw;
+        border:1px solid #ddd;
+        transform:rotateY(-6deg);
+        box-shadow: 1px 1px 0px 0px #aaa,1px 1px 0px 1px #aaa;
+        &:hover{
+            transform:unset;
+        }
+    }
+}
+
+
+.flipped{
+    animation: flipCard 0.72s ease-in-out forwards;
+}
+
+@keyframes flipCard {
+    
+    from{
+        transform: initial;
+    }
+    50%{
+        transform:translateX(-125%) scale(0.84) scaleY(0.6) scaleX(0.6);
+    }
+    86%{
+        transform:translateX(0%) rotate(8deg) scaleY(1);
+    }
+    93%{
+        transform:rotate(-8deg);
+    }
+    100%{
+        transform:rotate(0deg) scale(1);
+    }
+
 }

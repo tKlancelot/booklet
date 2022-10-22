@@ -1,10 +1,15 @@
+.heading,.option-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.4vw;
+    width: 100%;
+}
+
+
 .heading{
     border:2px solid red;
     margin: auto auto 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -12,12 +17,20 @@
     display: flex;
     width: 100%;
     border:2px solid blue;
-    margin:0 auto auto;
+    margin:0 auto 0;
     justify-content: center;
-    min-height: 48vh;
+    min-height: 32vw;
     &__body{
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+.option-panel{
+    margin:0 auto auto;
+    border:2px solid green;
+    &__body{
+
     }
 }
