@@ -2,14 +2,21 @@
     position: absolute;
     perspective: 1000px;
     &__body{
+        border:1px solid #4b5258;
         transition: 0.16s linear;
-        background-color: #fff;
+        background-color: #262b32;
         transform-origin: center;
         width: 22vw;
         height: 28vw;
-        border:1px solid #ddd;
-        transform:rotateY(-6deg);
-        box-shadow: 1px 1px 0px 0px #aaa,1px 1px 0px 1px #aaa;
+        color:#cfd7dff4;
+        padding: 1.5rem;
+        display: grid;
+        &__header{
+            text-transform: uppercase;
+        }
+        &__content{
+            display: grid;
+        }
         &:hover{
             transform:unset;
         }
@@ -19,6 +26,9 @@
 
 .flipped{
     animation: flipCard 0.72s ease-in-out forwards;
+    .page__body{
+        // animation:colorPop 0.1s ease-in-out forwards;
+    }
 }
 
 @keyframes flipCard {
@@ -27,9 +37,12 @@
         transform: initial;
     }
     50%{
-        transform:translateX(-125%) scale(0.84) scaleY(0.6) scaleX(0.6);
+        transform:translateX(0%) scale(1.16) scaleY(1.04) scaleX(1.04);
+        background-color: lightgreen;
+        opacity: 0.1;
     }
     86%{
+        opacity: 1;
         transform:translateX(0%) rotate(8deg) scaleY(1);
     }
     93%{
@@ -39,4 +52,16 @@
         transform:rotate(0deg) scale(1);
     }
 
+}
+
+@keyframes colorPop {
+    from{
+        background-color: #262b32;
+    }
+    50%{
+        background-color: #4b5258;
+    }
+    100%{
+        background-color: #262b32;
+    }
 }

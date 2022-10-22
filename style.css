@@ -8,11 +8,9 @@ html, body, * {
 
 main {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
 }
 
 button {
@@ -22,7 +20,15 @@ button {
 #action {
   height: 3.2vw;
   width: 6vw;
-  background-color: #ccc;
+  background-color: #262b32;
+  border: 1px solid #4b5258;
+  color: rgba(207, 215, 223, 0.9568627451);
+  border-radius: 32px;
+  transition: 0.32s ease;
+  text-transform: uppercase;
+}
+#action:hover {
+  background-color: #4b5258;
 }
 
 .page {
@@ -30,14 +36,21 @@ button {
   perspective: 1000px;
 }
 .page__body {
+  border: 1px solid #4b5258;
   transition: 0.16s linear;
-  background-color: #fff;
+  background-color: #262b32;
   transform-origin: center;
   width: 22vw;
   height: 28vw;
-  border: 1px solid #ddd;
-  transform: rotateY(-6deg);
-  box-shadow: 1px 1px 0px 0px #aaa, 1px 1px 0px 1px #aaa;
+  color: rgba(207, 215, 223, 0.9568627451);
+  padding: 1.5rem;
+  display: grid;
+}
+.page__body__header {
+  text-transform: uppercase;
+}
+.page__body__content {
+  display: grid;
 }
 .page__body:hover {
   transform: unset;
@@ -46,15 +59,17 @@ button {
 .flipped {
   animation: flipCard 0.72s ease-in-out forwards;
 }
-
 @keyframes flipCard {
   from {
     transform: initial;
   }
   50% {
-    transform: translateX(-125%) scale(0.84) scaleY(0.6) scaleX(0.6);
+    transform: translateX(0%) scale(1.16) scaleY(1.04) scaleX(1.04);
+    background-color: lightgreen;
+    opacity: 0.1;
   }
   86% {
+    opacity: 1;
     transform: translateX(0%) rotate(8deg) scaleY(1);
   }
   93% {
@@ -64,23 +79,36 @@ button {
     transform: rotate(0deg) scale(1);
   }
 }
+@keyframes colorPop {
+  from {
+    background-color: #262b32;
+  }
+  50% {
+    background-color: #4b5258;
+  }
+  100% {
+    background-color: #262b32;
+  }
+}
 .heading, .option-panel {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 6.4vw;
+  height: 100%;
   width: 100%;
 }
 
 .heading {
-  border: 2px solid red;
   margin: auto auto 0;
+  border-bottom: 1px solid #4b5258;
+  background-color: #1C2128;
+  color: rgba(207, 215, 223, 0.9568627451);
 }
 
 .booklet {
   display: flex;
   width: 100%;
-  border: 2px solid blue;
+  background-color: #181C24;
   margin: 0 auto 0;
   justify-content: center;
   min-height: 32vw;
@@ -89,11 +117,13 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .option-panel {
+  border-top: 1px solid #4b5258;
+  background-color: #1C2128;
   margin: 0 auto auto;
-  border: 2px solid green;
 }
 
 /*# sourceMappingURL=style.css.map */

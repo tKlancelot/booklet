@@ -2,21 +2,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 6.4vw;
+    height: 100%;
     width: 100%;
 }
 
 
 .heading{
-    border:2px solid red;
     margin: auto auto 0;
+    border-bottom:1px solid #4b5258;
+    background-color: #1C2128;
+    color:#cfd7dff4;
 }
 
 
 .booklet{
     display: flex;
     width: 100%;
-    border:2px solid blue;
+    background-color: #181C24;
     margin:0 auto 0;
     justify-content: center;
     min-height: 32vw;
@@ -24,12 +26,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
 }
 
 .option-panel{
+    border-top:1px solid #4b5258;
+    background-color: #1C2128;
     margin:0 auto auto;
-    border:2px solid green;
     &__body{
 
     }

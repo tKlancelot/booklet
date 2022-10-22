@@ -4,7 +4,8 @@
 
 let btn, allPages, zIndexArray;
 
-btn = document.querySelector('#action');
+// btn = document.querySelector('#action');
+btn = document.querySelector('.booklet__body');
 allPages = document.querySelectorAll('.page');
 zIndexArray = [];
 
@@ -20,7 +21,7 @@ let index = 0;
 
 // fonction de reaffectation de zIndex
 
-const test = () => {
+const shiftZIndexPosition = () => {
 
     // methode splice pour shift un element (decaler la position des elements)
 
@@ -35,10 +36,10 @@ const test = () => {
     }
 } 
 
-// test();
+
 
 btn.addEventListener('click',function(){
-    test();
+    shiftZIndexPosition();
     if(index < allPages.length){
         switch(true){
             case (index == allPages.length - 1):
